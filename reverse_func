@@ -1,0 +1,20 @@
+'''
+Verilen listenin içindeki elemanları tersine döndüren bir fonksiyon yazın.
+Eğer listenin içindeki elemanlar da liste içeriyorsa onların elemanlarını da tersine döndürün. Örnek olarak:
+
+input: [[1, 2], [3, 4], [5, 6, 7]]
+
+output: [[[7, 6, 5], [4, 3], [2, 1]]
+'''
+
+empty_list = []
+def revers_func(L):
+    L.reverse()  # [[5,6,7],[3,4],[1,2]]
+
+    for i in L:
+        i.reverse()  # [[7,6,5],[4,3],[2,1]]
+        empty_list.append(i)
+
+
+revers_func([[1, 2], [3, 4], [5, 6, 7]])
+print(empty_list)
