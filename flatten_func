@@ -1,0 +1,12 @@
+empty_list = []
+
+def flat(L):
+    for i in L:
+        if type(i) == list:
+            flat(i)
+        else:
+            empty_list.append(i)
+
+flat([[1,'a',['cat'],2],[[[3]],'dog'],4,5])
+flatten_list = empty_list
+print(flatten_list)
